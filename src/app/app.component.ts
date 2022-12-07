@@ -12,10 +12,15 @@ export class AppComponent {
   constructor(private userData:UsersDataService){
     userData.users().subscribe((data)=>{
      console.warn("data",data); 
-      this.users=data
-    })
+      this.users=data;
+    });
+  }  
+  // // Save data using POST method 
+  getUserFormData (data: any){
+    this. userData. saveUsers(data) .subscribe((result)=>{
+      console.warn(result)
+  });
+ 
 
   }
-  
-
 }

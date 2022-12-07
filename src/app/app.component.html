@@ -1,6 +1,17 @@
 <h1>Api call demo</h1>
 <ul><li *ngFor="let user of users" >
-  {{user.name}}, {{user.email}}
-</li></ul>
+ {{user.username}}, {{user.email}}, {{user.phone}}
+
+ <h1>{{ title }}<h1>
+    <form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)">
+   <input type="text" ngModel name="name" placeholder="Enter Name">
+   <br> <br>
+   <input type="text"ngModel name="email" placeholder="Enter Email">
+   <br> <br>
+   <input type="password" ngModel name="password" placeholder="Enter Password">
+   <br> <br>
+   <button>Add New User</button>
+   </form>
+   
 
 <router-outlet></router-outlet>
